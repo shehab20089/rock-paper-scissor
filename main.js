@@ -42,38 +42,38 @@ function checkStrongerChoice(choice1, choice2) {
   }
 }
 
-// function to create game form multiple rounds
-function game(numberOfRounds = 5) {
-  let playerScore = 0;
-  let computerScore = 0;
-  for (let i = 0; i < numberOfRounds; i++) {
-    console.log(`*****************Round${i + 1}*****************`);
-    const computerChoice = getComputerChoice();
-    const playerChoice = getPlayerChoice();
-    console.log(`player: ${playerChoice} , computer:${computerChoice}`);
+// // function to create game form multiple rounds
+// function game(numberOfRounds = 5) {
+//   let playerScore = 0;
+//   let computerScore = 0;
+//   for (let i = 0; i < numberOfRounds; i++) {
+//     console.log(`*****************Round${i + 1}*****************`);
+//     const computerChoice = getComputerChoice();
+//     const playerChoice = getPlayerChoice();
+//     console.log(`player: ${playerChoice} , computer:${computerChoice}`);
 
-    const winner = playRound(playerChoice, computerChoice);
-    if (winner === "computer") {
-      computerScore++;
-      console.log(
-        `You Lose this round! ${computerChoice} beats ${playerChoice}`
-      );
-    } else if (winner === "player") {
-      playerScore++;
-      console.log(
-        `You Win this round! ${playerChoice} beats ${computerChoice}`
-      );
-    } else {
-      console.log("draw");
-    }
-    console.log(
-      `Total score Player:${playerScore} , computer:${computerScore}`
-    );
-  }
+//     const winner = playRound(playerChoice, computerChoice);
+//     if (winner === "computer") {
+//       computerScore++;
+//       console.log(
+//         `You Lose this round! ${computerChoice} beats ${playerChoice}`
+//       );
+//     } else if (winner === "player") {
+//       playerScore++;
+//       console.log(
+//         `You Win this round! ${playerChoice} beats ${computerChoice}`
+//       );
+//     } else {
+//       console.log("draw");
+//     }
+//     console.log(
+//       `Total score Player:${playerScore} , computer:${computerScore}`
+//     );
+//   }
 
-  if (computerScore > playerScore)
-    alert("You loseeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
-  else if (playerScore > computerScore)
-    alert("Congratulations you won against the computer");
-  else alert("you all are loser");
-}
+//   if (computerScore > playerScore)
+//     alert("You loseeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
+//   else if (playerScore > computerScore)
+//     alert("Congratulations you won against the computer");
+//   else alert("you all are loser");
+// }
