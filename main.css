@@ -1,0 +1,152 @@
+body {
+  height: 100vh;
+  background-color: #73fbd3;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+* {
+  transition: 0.3s all;
+}
+/* Page 1 Ui */
+#page1 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#page1 h1 {
+  color: #5c7aff;
+  font-size: 90px;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 1;
+  }
+}
+@keyframes fightingAnimation {
+  0% {
+    transform: scale(1);
+    transform: translateX(0px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.3);
+    transform: translateX(100px);
+
+    opacity: 1;
+  }
+}
+@keyframes fightingAnimationOpposite {
+  0% {
+    transform: scale(1);
+    transform: translateX(0px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.3);
+    transform: translateX(-100px);
+
+    opacity: 1;
+  }
+}
+#page1 button {
+  font-style: none;
+  border: none;
+  background: none;
+  font-size: larger;
+  animation: scaleAnimation 1s linear infinite alternate-reverse;
+  cursor: pointer;
+  color: #4a8fe7;
+}
+#page1 button:focus {
+  outline: none;
+}
+
+/* page 2 */
+#page2 {
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#page2 h1 {
+  font-size: 80px;
+}
+.game-board {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+#page2 .participant {
+  width: 180px;
+  height: 180px;
+  background: #5c7aff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+#player {
+  animation: fightingAnimation 0.5s linear infinite alternate-reverse;
+}
+#computer {
+  animation: fightingAnimationOpposite 0.5s linear infinite alternate-reverse;
+}
+.Choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 2rem;
+}
+.choice-Item {
+  height: 90px;
+  background-color: #59d2fe;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  color: #4a8fe7;
+  font-size: 25px;
+  border: 1px solid #5c7aff;
+  opacity: 1;
+  user-select: none;
+}
+.choice-Item:hover {
+  opacity: 0.7;
+  transform: scale(1.15);
+  cursor: pointer;
+}
+.score {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  font-size: 22px;
+}
+.play-again {
+  display: none;
+  padding: 20px;
+  border-radius: 22px;
+  outline: none;
+  border: 1px solid #4a8fe7;
+  background-color: #5c7aff;
+  color: #73fbd3;
+  cursor: pointer;
+  font-size: 22px;
+}
+.play-again:hover {
+  opacity: 0.7;
+}
