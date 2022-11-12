@@ -6,12 +6,37 @@
     <title>Rock paper scissor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
   </head>
   <body>
+    <!-- Landing Page -->
     <div id="page1">
       <h1>Rock Paper Scissors</h1>
-      <button>Click Here to Start</button>
+      <button class="start-btn">Click Here to Start</button>
+    </div>
+    <!-- Choose Number of rounds   -->
+
+    <div id="page2">
+      <h1 class="round-num">Round 1</h1>
+      <h2 class="msg-area">Please select your choice to start playing</h2>
+      <div class="game">
+        <div class="game-board">
+          <div id="player" class="participant"></div>
+          <h2>Vs</h2>
+          <div id="computer" class="participant"></div>
+        </div>
+        <div class="Choices">
+          <div rps-choice="rock" class="choice-Item">Rock</div>
+          <div rps-choice="paper" class="choice-Item">Paper</div>
+          <div rps-choice="scissor" class="choice-Item">Scissor</div>
+          <button class="play-again">Play again</button>
+        </div>
+      </div>
+
+      <div class="score">
+        <div class="compScore">Computer: 0</div>
+        <div class="plaScore">Player: 0</div>
+      </div>
     </div>
   </body>
 </html>
